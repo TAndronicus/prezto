@@ -34,6 +34,8 @@ if ! zstyle -t ':prezto:module:git:alias' skip 'yes'; then
   alias gb='git branch'
   alias gba='git branch --all --verbose'
   alias gbc='git checkout -b'
+  alias gco='git checkout'
+  alias gcm='git checkout master'
   alias gbd='git branch --delete'
   alias gbD='git branch --delete --force'
   alias gbl='git branch --verbose'
@@ -95,7 +97,7 @@ if ! zstyle -t ':prezto:module:git:alias' skip 'yes'; then
   alias gfa='git fetch --all'
   alias gfc='git clone'
   alias gfcr='git clone --recurse-submodules'
-  alias gfm='git pull'
+  alias gl='git pull'
   alias gfr='git pull --rebase'
 
   # Flow (F)
@@ -170,20 +172,21 @@ if ! zstyle -t ':prezto:module:git:alias' skip 'yes'; then
   alias ggw='git grep --word-regexp'
 
   # Index (i)
-  alias gia='git add'
-  alias giA='git add --patch'
-  alias giu='git add --update'
-  alias gid='git diff --no-ext-diff --cached'
-  alias giD='git diff --no-ext-diff --cached --word-diff'
-  alias gii='git update-index --assume-unchanged'
-  alias giI='git update-index --no-assume-unchanged'
-  alias gir='git reset'
-  alias giR='git reset --patch'
-  alias gix='git rm -r --cached'
-  alias giX='git rm -rf --cached'
+  alias ga='git add'
+  alias gA='git add --patch'
+  alias gu='git add --update'
+  alias gd='git diff --no-ext-diff --cached'
+  alias gD='git diff --no-ext-diff --cached --word-diff'
+  alias gi='git update-index --assume-unchanged'
+  alias gI='git update-index --no-assume-unchanged'
+  alias gr='git reset'
+  alias gR='git reset --patch'
+  alias gx='git rm -r --cached'
+  alias gX='git rm -rf --cached'
+  alias gau='git add -u'
 
   # Log (l)
-  alias gl='git log --topo-order --pretty=format:"${_git_log_medium_format}"'
+  # alias gl='git log --topo-order --pretty=format:"${_git_log_medium_format}"'
   alias gls='git log --topo-order --stat --pretty=format:"${_git_log_medium_format}"'
   alias gld='git log --topo-order --stat --patch --full-diff --pretty=format:"${_git_log_medium_format}"'
   alias glo='git log --topo-order --pretty=format:"${_git_log_oneline_format}"'
@@ -205,7 +208,7 @@ if ! zstyle -t ':prezto:module:git:alias' skip 'yes'; then
   alias gpa='git push --all'
   alias gpA='git push --all && git push --tags'
   alias gpt='git push --tags'
-  alias gpc='git push --set-upstream origin "$(git-branch-current 2> /dev/null)"'
+  alias gpsup='git push --set-upstream origin "$(git-branch-current 2> /dev/null)"'
   alias gpp='git pull origin "$(git-branch-current 2> /dev/null)" && git push origin "$(git-branch-current 2> /dev/null)"'
 
   # Rebase (r)
@@ -257,6 +260,7 @@ if ! zstyle -t ':prezto:module:git:alias' skip 'yes'; then
   alias gtl='git tag -l'
 
   # Working Copy (w)
+  alias gst='git status'
   alias gws='git status --ignore-submodules=${_git_status_ignore_submodules} --short'
   alias gwS='git status --ignore-submodules=${_git_status_ignore_submodules}'
   alias gwd='git diff --no-ext-diff'
