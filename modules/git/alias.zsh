@@ -69,6 +69,7 @@ if ! zstyle -t ':prezto:module:git:alias' skip 'yes'; then
   alias gcP='git cherry-pick --no-commit'
   alias gcr='git revert'
   alias gcR='git reset "HEAD^"'
+  alias grhh='git reset HEAD --hard'
   alias gcs='git show'
   alias gcl='git-commit-lost'
   alias gcy='git cherry -v --abbrev'
